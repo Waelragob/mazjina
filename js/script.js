@@ -76,4 +76,26 @@
                 }
             });
         });
+   document.addEventListener('DOMContentLoaded', function() {
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const toggleIcon = document.getElementById('toggleIcon');
     
+    sidebarToggle.addEventListener('click', function() {
+        // تغيير الأيقونة
+        if (toggleIcon.classList.contains('bi-list')) {
+            toggleIcon.classList.remove('bi-list');
+            toggleIcon.classList.add('bi-x');
+           this.style.position = "absolute";
+
+// ثم تحديد الموضع الأفقي
+this.style.left = '240px';
+        } else {
+            toggleIcon.classList.remove('bi-x');
+            toggleIcon.classList.add('bi-list');
+               this.style.position = "absolute";
+
+// ثم تحديد الموضع الأفقي
+this.style.left = '15px';
+        }
+    });
+});

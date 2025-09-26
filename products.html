@@ -12,16 +12,16 @@
     <!-- Sidebar & Header -->
       <!-- Toggle Button for Mobile -->
     <button class="toggle-btn" id="sidebarToggle">
-        <i class="bi bi-list"></i>
-    </button>
+    <i class="bi bi-list" id="toggleIcon"></i>
+</button>
 
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class="border-end" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom p-3">
+            <div class="sidebar-heading  p-2">
                 <div class="d-flex align-items-center">
-                    <i class="bi bi-music-note-beamed fs-4 me-2"></i>
-                    <h4 class="mb-0">Mazijna</h4>
+                   
+                   <img src="assets/logo/logo.png" alt="" class="logo">
                 </div>
             </div>
             <div class="list-group list-group-flush">
@@ -83,69 +83,70 @@
                 <div class="card shadow mb-4">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Image</th>
-                                        <th>Name</th>
-                                        <th>Category</th>
-                                        <th>Price</th>
-                                        <th>Stock</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>#P-1001</td>
-                                        <td><img src="https://via.placeholder.com/50" class="rounded"></td>
-                                        <td>Acoustic Guitar</td>
-                                        <td>Guitars</td>
-                                        <td>$299.00</td>
-                                        <td>45</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editProductModal">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#P-1002</td>
-                                        <td><img src="https://via.placeholder.com/50" class="rounded"></td>
-                                        <td>Electric Guitar</td>
-                                        <td>Guitars</td>
-                                        <td>$499.00</td>
-                                        <td>12</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editProductModal">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#P-1003</td>
-                                        <td><img src="https://via.placeholder.com/50" class="rounded"></td>
-                                        <td>Digital Piano</td>
-                                        <td>Keyboards</td>
-                                        <td>$899.00</td>
-                                        <td>5</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editProductModal">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                           <table class="table mobile-table table-hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="ID">#P-1001</td>
+      <td data-label="Image"><img src="https://via.placeholder.com/50" class="rounded"></td>
+      <td data-label="Name">Acoustic Guitar</td>
+      <td data-label="Category">Guitars</td>
+      <td data-label="Price">$299.00</td>
+      <td data-label="Stock">45</td>
+      <td data-label="Actions">
+        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editProductModal">
+          <i class="bi bi-pencil"></i>
+        </button>
+        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
+          <i class="bi bi-trash"></i>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="ID">#P-1001</td>
+      <td data-label="Image"><img src="https://via.placeholder.com/50" class="rounded"></td>
+      <td data-label="Name">Acoustic Guitar</td>
+      <td data-label="Category">Guitars</td>
+      <td data-label="Price">$299.00</td>
+      <td data-label="Stock">45</td>
+      <td data-label="Actions">
+        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editProductModal">
+          <i class="bi bi-pencil"></i>
+        </button>
+        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
+          <i class="bi bi-trash"></i>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="ID">#P-1001</td>
+      <td data-label="Image"><img src="https://via.placeholder.com/50" class="rounded"></td>
+      <td data-label="Name">Acoustic Guitar</td>
+      <td data-label="Category">Guitars</td>
+      <td data-label="Price">$299.00</td>
+      <td data-label="Stock">45</td>
+      <td data-label="Actions">
+        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editProductModal">
+          <i class="bi bi-pencil"></i>
+        </button>
+        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
+          <i class="bi bi-trash"></i>
+        </button>
+      </td>
+    </tr>
+    <!-- كرر نفس التغييرات في باقي الصفوف -->
+  </tbody>
+</table>
                         </div>
                     </div>
                 </div>

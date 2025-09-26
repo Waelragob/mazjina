@@ -10,19 +10,20 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
    
 </head>
+
 <body>
     <!-- Toggle Button for Mobile -->
     <button class="toggle-btn" id="sidebarToggle">
-        <i class="bi bi-list"></i>
-    </button>
+    <i class="bi bi-list" id="toggleIcon"></i>
+</button>
 
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class="border-end" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom p-3">
+            <div class="sidebar-heading  p-2">
                 <div class="d-flex align-items-center">
-                    <i class="bi bi-music-note-beamed fs-4 me-2"></i>
-                    <h4 class="mb-0">Mazijna</h4>
+                   
+                   <img src="assets/logo/logo.png" alt="" class="logo">
                 </div>
             </div>
             <div class="list-group list-group-flush">
@@ -180,40 +181,40 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Order ID</th>
-                                        <th>Customer</th>
-                                        <th>Date</th>
-                                        <th>Amount</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>#ORD-2345</td>
-                                        <td>John Doe</td>
-                                        <td>2023-08-20</td>
-                                        <td>$345.00</td>
-                                        <td><span class="badge bg-success">Completed</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>#ORD-2346</td>
-                                        <td>Jane Smith</td>
-                                        <td>2023-08-21</td>
-                                        <td>$299.50</td>
-                                        <td><span class="badge bg-warning">Processing</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>#ORD-2347</td>
-                                        <td>Robert Johnson</td>
-                                        <td>2023-08-22</td>
-                                        <td>$540.00</td>
-                                        <td><span class="badge bg-primary">Shipped</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                          <table class="table mobile-table table-hover">
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Order ID">#ORD-2345</td>
+            <td data-label="Customer">John Doe</td>
+            <td data-label="Date">2023-08-20</td>
+            <td data-label="Amount">$345.00</td>
+            <td data-label="Status"><span class="badge bg-success">Completed</span></td>
+        </tr>
+        <tr>
+            <td data-label="Order ID">#ORD-2346</td>
+            <td data-label="Customer">Jane Smith</td>
+            <td data-label="Date">2023-08-21</td>
+            <td data-label="Amount">$299.50</td>
+            <td data-label="Status"><span class="badge bg-warning">Processing</span></td>
+        </tr>
+        <tr>
+            <td data-label="Order ID">#ORD-2347</td>
+            <td data-label="Customer">Robert Johnson</td>
+            <td data-label="Date">2023-08-22</td>
+            <td data-label="Amount">$540.00</td>
+            <td data-label="Status"><span class="badge bg-primary">Shipped</span></td>
+        </tr>
+    </tbody>
+</table>
                         </div>
                     </div>
                 </div>
@@ -223,5 +224,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
+  
+  
 </body>
 </html>
