@@ -79,7 +79,7 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
                         <div class="row align-items-center">
-                            <div class="col-md-6">
+                            <div class="col-12 col-md-6 mb-2 mb-md-0">
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Search orders...">
                                     <button class="btn btn-primary" type="button">
@@ -87,7 +87,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="col-md-6 text-end">
+                            <div class="col-12 col-md-6 text-end text-md-end mb-3 mb-md-0">
                                 <select class="form-select w-auto d-inline-block">
                                     <option>All Statuses</option>
                                     <option>Completed</option>
@@ -97,9 +97,10 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-hover">
+                            <table class="table mobile-table table-hover">
                                 <thead>
                                     <tr>
                                         <th>Order ID</th>
@@ -112,36 +113,36 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>#ORD-2345</td>
-                                        <td>John Doe</td>
-                                        <td>2023-08-20</td>
-                                        <td>$345.00</td>
-                                        <td><span class="badge bg-success" data-status="completed">Completed</span></td>
-                                        <td>
+                                        <td data-label="Order ID">#ORD-2345</td>
+                                        <td data-label="Customer">John Doe</td>
+                                        <td data-label="Date">2023-08-20</td>
+                                        <td data-label="Amount">$345.00</td>
+                                        <td data-label="Status"><span class="badge bg-success" data-status="completed">Completed</span></td>
+                                        <td data-label="Actions">
                                             <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#orderDetailsModal">
                                                 <i class="bi bi-eye"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>#ORD-2346</td>
-                                        <td>Jane Smith</td>
-                                        <td>2023-08-21</td>
-                                        <td>$299.50</td>
-                                        <td><span class="badge bg-warning" data-status="processing">Processing</span></td>
-                                        <td>
+                                        <td data-label="Order ID">#ORD-2346</td>
+                                        <td data-label="Customer">Jane Smith</td>
+                                        <td data-label="Date">2023-08-21</td>
+                                        <td data-label="Amount">$299.50</td>
+                                        <td data-label="Status"><span class="badge bg-warning" data-status="processing">Processing</span></td>
+                                        <td data-label="Actions">
                                             <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#orderDetailsModal">
                                                 <i class="bi bi-eye"></i>
                                             </button>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>#ORD-2347</td>
-                                        <td>Robert Johnson</td>
-                                        <td>2023-08-22</td>
-                                        <td>$540.00</td>
-                                        <td><span class="badge bg-primary" data-status="shipped">Shipped</span></td>
-                                        <td>
+                                        <td data-label="Order ID">#ORD-2347</td>
+                                        <td data-label="Customer">Robert Johnson</td>
+                                        <td data-label="Date">2023-08-22</td>
+                                        <td data-label="Amount">$540.00</td>
+                                        <td data-label="Status"><span class="badge bg-primary" data-status="shipped">Shipped</span></td>
+                                        <td data-label="Actions">
                                             <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#orderDetailsModal">
                                                 <i class="bi bi-eye"></i>
                                             </button>

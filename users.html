@@ -78,65 +78,71 @@
                 <div class="card shadow mb-4">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>User ID</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Role</th>
-                                        <th>Joined</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>#U-1001</td>
-                                        <td>John Doe</td>
-                                        <td>john@example.com</td>
-                                        <td><span class="badge bg-primary">Customer</span></td>
-                                        <td>2023-01-15</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#U-1002</td>
-                                        <td>Jane Smith</td>
-                                        <td>jane@example.com</td>
-                                        <td><span class="badge bg-primary">Customer</span></td>
-                                        <td>2023-02-20</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#U-1003</td>
-                                        <td>Robert Johnson</td>
-                                        <td>robert@example.com</td>
-                                        <td><span class="badge bg-warning">Admin</span></td>
-                                        <td>2023-03-10</td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
-                                                <i class="bi bi-pencil"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table mobile-table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>User ID</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Role</th>
+                                            <th>Account Type</th>
+                                            <th>Joined</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="User ID">#U-1001</td>
+                                            <td data-label="Name">John Doe</td>
+                                            <td data-label="Email">john@example.com</td>
+                                            <td data-label="Role"><span class="badge bg-primary">Customer</span></td>
+                                            <td data-label="Account Type"><span class="badge bg-success">Regular User</span></td>
+                                            <td data-label="Joined">2023-01-15</td>
+                                            <td data-label="Actions">
+                                                <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                                                    <i class="bi bi-pencil"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="User ID">#U-1002</td>
+                                            <td data-label="Name">Jane Smith</td>
+                                            <td data-label="Email">jane@example.com</td>
+                                            <td data-label="Role"><span class="badge bg-primary">Customer</span></td>
+                                            <td data-label="Account Type"><span class="badge bg-info">Music Teacher</span></td>
+                                            <td data-label="Joined">2023-02-20</td>
+                                            <td data-label="Actions">
+                                                <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                                                    <i class="bi bi-pencil"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="User ID">#U-1003</td>
+                                            <td data-label="Name">Robert Johnson</td>
+                                            <td data-label="Email">robert@example.com</td>
+                                            <td data-label="Role"><span class="badge bg-warning">Admin</span></td>
+                                            <td data-label="Account Type"><span class="badge bg-success">Regular User</span></td>
+                                            <td data-label="Joined">2023-03-10</td>
+                                            <td data-label="Actions">
+                                                <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                                                    <i class="bi bi-pencil"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

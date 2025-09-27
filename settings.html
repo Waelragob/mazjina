@@ -74,89 +74,173 @@
             <div class="container-fluid p-4">
                 <h1 class="h3 mb-4">Settings</h1>
                 
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <ul class="nav nav-tabs card-header-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-bs-toggle="tab" href="#general">General</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#account">Account</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-body">
-                        <div class="tab-content">
-                            <!-- General Settings -->
-                            <div class="tab-pane fade show active" id="general">
-                                <form id="generalSettingsForm">
-                                    <div class="mb-3">
-                                        <label class="form-label">Store Name <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" value="Mazijna" required>
+                <div class="settings-container">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <ul class="nav nav-tabs card-header-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-bs-toggle="tab" href="#general">
+                                        <i class="bi bi-gear me-1"></i>General Settings
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#account">
+                                        <i class="bi bi-person me-1"></i>Account Settings
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content">
+                                <!-- General Settings -->
+                                <div class="tab-pane fade show active" id="general">
+                                    <div class="settings-section">
+                                        <h4><i class="bi bi-globe"></i> Store Information</h4>
+                                        <form id="generalSettingsForm">
+                                            <div class="mb-3">
+                                                <label class="form-label">Store Name <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" value="Mazijna" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Store Email <span class="text-danger">*</span></label>
+                                                <input type="email" class="form-control" value="info@mazijna.com" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Store Phone <span class="text-danger">*</span></label>
+                                                <input type="tel" class="form-control" value="(123) 456-7890" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Store Address <span class="text-danger">*</span></label>
+                                                <textarea class="form-control" rows="2" required>123 Music Street, New York, NY 10001</textarea>
+                                            </div>
+                                            <div class="section-divider"></div>
+                                            <h4><i class="bi bi-currency-exchange"></i> Store Preferences</h4>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Currency <span class="text-danger">*</span></label>
+                                                    <select class="form-select" required>
+                                                        <option>USD - US Dollar</option>
+                                                        <option selected>EUR - Euro</option>
+                                                        <option>GBP - British Pound</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Time Zone <span class="text-danger">*</span></label>
+                                                    <select class="form-select" required>
+                                                        <option>UTC</option>
+                                                        <option selected>EST (Eastern Standard Time)</option>
+                                                        <option>PST (Pacific Standard Time)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Date Format <span class="text-danger">*</span></label>
+                                                    <select class="form-select" required>
+                                                        <option selected>MM/DD/YYYY</option>
+                                                        <option>DD/MM/YYYY</option>
+                                                        <option>YYYY-MM-DD</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Time Format <span class="text-danger">*</span></label>
+                                                    <select class="form-select" required>
+                                                        <option selected>12-hour</option>
+                                                        <option>24-hour</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary" id="saveGeneralSettings">
+                                                <i class="bi bi-save me-1"></i>Save Changes
+                                            </button>
+                                        </form>
                                     </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Store Email <span class="text-danger">*</span></label>
-                                        <input type="email" class="form-control" value="info@mazijna.com" required>
+                                </div>
+                                
+                                <!-- Account Settings -->
+                                <div class="tab-pane fade" id="account">
+                                    <div class="settings-section">
+                                        <h4><i class="bi bi-person"></i> Personal Information</h4>
+                                        <form id="accountSettingsForm">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">First Name <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" value="Admin" required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label">Last Name <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" value="User" required>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Email Address <span class="text-danger">*</span></label>
+                                                <input type="email" class="form-control" value="admin@mazijna.com" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Current Password <span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <input type="password" class="form-control" id="currentPassword" required>
+                                                    <span class="input-group-text">
+                                                        <i class="bi bi-eye-slash" id="toggleCurrentPassword"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="passwordChangeCheck">
+                                                <label class="form-check-label" for="passwordChangeCheck">
+                                                    I want to change my password
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="password-fields" style="display: none;">
+                                                <div class="mb-3">
+                                                    <label class="form-label">New Password <span class="text-danger">*</span></label>
+                                                    <div class="input-group">
+                                                        <input type="password" class="form-control" id="newPassword" required>
+                                                        <span class="input-group-text">
+                                                            <i class="bi bi-eye-slash" id="toggleNewPassword"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Confirm New Password <span class="text-danger">*</span></label>
+                                                    <div class="input-group">
+                                                        <input type="password" class="form-control" id="confirmPassword" required>
+                                                        <span class="input-group-text">
+                                                            <i class="bi bi-eye-slash" id="toggleConfirmPassword"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <div class="progress" style="height: 8px; margin-bottom: 5px;">
+                                                        <div id="passwordStrength" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                                                    </div>
+                                                    <small id="passwordStrengthText" class="text-muted">Password strength: <span class="fw-bold">Too Short</span></small>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="mb-3">
+                                                <label class="form-label">Security Questions</label>
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <select class="form-select">
+                                                            <option>What was your first pet's name?</option>
+                                                            <option>What is your mother's maiden name?</option>
+                                                            <option>What city were you born in?</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <input type="text" class="form-control" placeholder="Answer">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <button type="submit" class="btn btn-primary" id="saveAccountSettings">
+                                                <i class="bi bi-save me-1"></i>Update Account
+                                            </button>
+                                        </form>
                                     </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Store Phone <span class="text-danger">*</span></label>
-                                        <input type="tel" class="form-control" value="(123) 456-7890" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Store Address <span class="text-danger">*</span></label>
-                                        <textarea class="form-control" rows="2" required>123 Music Street, New York, NY 10001</textarea>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Currency <span class="text-danger">*</span></label>
-                                        <select class="form-select" required>
-                                            <option>USD - US Dollar</option>
-                                            <option selected>EUR - Euro</option>
-                                            <option>GBP - British Pound</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Time Zone <span class="text-danger">*</span></label>
-                                        <select class="form-select" required>
-                                            <option>UTC</option>
-                                            <option selected>EST (Eastern Standard Time)</option>
-                                            <option>PST (Pacific Standard Time)</option>
-                                        </select>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary" id="saveGeneralSettings">Save Changes</button>
-                                </form>
-                            </div>
-                            
-                            <!-- Account Settings -->
-                            <div class="tab-pane fade" id="account">
-                                <form id="accountSettingsForm">
-                                    <div class="mb-3">
-                                        <label class="form-label">Full Name <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" value="Admin User" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Email Address <span class="text-danger">*</span></label>
-                                        <input type="email" class="form-control" value="admin@mazijna.com" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Current Password <span class="text-danger">*</span></label>
-                                        <input type="password" class="form-control" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">New Password <span class="text-danger">*</span></label>
-                                        <input type="password" class="form-control" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Confirm New Password <span class="text-danger">*</span></label>
-                                        <input type="password" class="form-control" required>
-                                    </div>
-                                    <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="passwordChangeCheck">
-                                        <label class="form-check-label" for="passwordChangeCheck">
-                                            I want to change my password
-                                        </label>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary" id="saveAccountSettings">Update Account</button>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>

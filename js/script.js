@@ -86,14 +86,18 @@
             toggleIcon.classList.remove('bi-list');
             toggleIcon.classList.add('bi-x');
            this.style.position = "absolute";
+           this.style.background = "none";
+           this.style.boxShadow="none";
+           this.style.fontSize="30px";
 
 // ثم تحديد الموضع الأفقي
-this.style.left = '240px';
+this.style.left = '250px';
         } else {
             toggleIcon.classList.remove('bi-x');
             toggleIcon.classList.add('bi-list');
                this.style.position = "absolute";
-
+               this.style.background = "#d5bf76";
+               this.style.fontSize="15px"
 // ثم تحديد الموضع الأفقي
 this.style.left = '15px';
         }

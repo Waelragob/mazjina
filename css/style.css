@@ -757,3 +757,449 @@
         border-bottom: none;
     }
 }
+@media (max-width: 900px) {
+    .mobile-table thead {
+        display: none;
+    }
+    
+    .mobile-table,
+    .mobile-table tbody,
+    .mobile-table tr,
+    .mobile-table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .mobile-table tr {
+        margin-bottom: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .mobile-table td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #e3e6f0;
+        text-align: right;
+    }
+    
+    .mobile-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 40%;
+        font-weight: 600;
+        text-align: left;
+        white-space: nowrap;
+    }
+    
+    .mobile-table td:last-child {
+        border-bottom: none;
+    }
+    
+    .mobile-table tr:last-child td {
+        border-bottom: none;
+    }
+}
+/* جدول متجاوب مع الشاشات الصغيرة */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.mobile-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.mobile-table th,
+.mobile-table td {
+    padding: 12px 15px;
+ 
+    border-bottom: 1px solid #e3e6f0;
+}
+
+/* عند 1200px */
+@media (max-width: 1200px) {
+   
+    .mobile-table td,
+    .mobile-table th {
+        padding: 10px 12px;
+    }
+}
+
+/* عند 990px */
+@media (max-width: 990px) {
+    /* .mobile-table td:nth-child(5),
+    .mobile-table th:nth-child(5),
+    .mobile-table td:nth-child(6),
+    .mobile-table th:nth-child(6) {
+        display: none;
+    } */
+    
+    .mobile-table td,
+    .mobile-table th {
+        padding: 9px 10px;
+    }
+}
+
+/* عند 762px */
+@media (max-width: 762px) {
+    .mobile-table thead {
+        display: none;
+    }
+    /* .mobile-table td:nth-child(5),
+    .mobile-table th:nth-child(5),
+    .mobile-table td:nth-child(6),
+    .mobile-table th:nth-child(6) {
+        display: none;
+    } */
+    
+    .mobile-table,
+    .mobile-table tbody,
+    .mobile-table tr,
+    .mobile-table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .mobile-table tr {
+        margin-bottom: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .mobile-table td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #e3e6f0;
+        text-align: right;
+    }
+    
+    .mobile-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 40%;
+        font-weight: 600;
+        text-align: left;
+        white-space: nowrap;
+    }
+    
+    .mobile-table td:last-child {
+        border-bottom: none;
+    }
+    
+    .mobile-table tr:last-child td {
+        border-bottom: none;
+    }
+    
+    /* تحسين عرض الأزرار على الشاشات الصغيرة */
+    .mobile-table td[data-label="Actions"] {
+        text-align: center;
+       
+    }
+    
+    .mobile-table td[data-label="Actions"] .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+}
+/* جدول متجاوب مع الشاشات الصغيرة */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.mobile-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.mobile-table th,
+.mobile-table td {
+    padding: 12px 15px;
+  
+    border-bottom: 1px solid #e3e6f0;
+}
+
+/* عند 1200px */
+@media (max-width: 1200px) {
+   
+    
+    .mobile-table td,
+    .mobile-table th {
+        padding: 10px 12px;
+    }
+}
+
+/* عند 990px */
+@media (max-width: 990px) {
+   
+    .mobile-table td,
+    .mobile-table th {
+        padding: 9px 10px;
+    }
+}
+
+/* عند 762px */
+@media (max-width: 762px) {
+   
+    
+    .mobile-table,
+    .mobile-table tbody,
+    .mobile-table tr,
+    .mobile-table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .mobile-table tr {
+        margin-bottom: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .mobile-table td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #e3e6f0;
+        text-align: right;
+    }
+    
+    .mobile-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 40%;
+        font-weight: 600;
+        text-align: left;
+        white-space: nowrap;
+    }
+    
+    .mobile-table td:last-child {
+        border-bottom: none;
+    }
+    
+    .mobile-table tr:last-child td {
+        border-bottom: none;
+    }
+    
+    /* تحسين عرض الأزرار على الشاشات الصغيرة */
+    .mobile-table td[data-label="Actions"] {
+        text-align: center;
+        
+    }
+    
+    .mobile-table td[data-label="Actions"] .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    
+    /* وضع قائمة الحالة تحت زر البحث مع هامش أسفل على الشاشات الصغيرة */
+    .card-header .row {
+        flex-direction: column;
+    }
+    
+    .card-header .row > div {
+        width: 100%;
+        padding: 10px;
+    }
+}
+/* تحسينات عامة لصفحة الإعدادات */
+.settings-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+    color: white;
+    border-radius: 12px 12px 0 0 !important;
+    padding: 15px 20px;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 8px 8px 0 0;
+    margin-right: 5px;
+    padding: 12px 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.nav-tabs .nav-link.active {
+    background: white;
+    color: #4e73df;
+    border-bottom: 3px solid #4e73df;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #5a5c69;
+    margin-bottom: 8px;
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: 1px solid #e3e6f0;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+.form-control::placeholder {
+    color: #858796;
+    opacity: 1;
+}
+
+.form-check-input:checked {
+    background-color: #4e73df;
+    border-color: #4e73df;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(78, 115, 223, 0.3);
+}
+
+.btn-outline-primary {
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(78, 115, 223, 0.15);
+}
+
+/* تحسينات إضافية للنماذج */
+.settings-section {
+    padding: 25px;
+    border-radius: 10px;
+    background: #f8f9fc;
+    margin-bottom: 20px;
+}
+
+.settings-section h4 {
+    color: #4e73df;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.settings-section h4 i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.section-divider {
+    height: 1px;
+    background: #e3e6f0;
+    margin: 20px 0;
+}
+
+/* تحسينات لشاشة الموبايل */
+@media (max-width: 768px) {
+    .card-header {
+        border-radius: 12px 12px 0 0 !important;
+    }
+    
+    .nav-tabs {
+        flex-direction: column;
+    }
+    
+    .nav-tabs .nav-link {
+        border-radius: 8px;
+        margin: 0 0 5px 0;
+    }
+    
+    .nav-tabs .nav-link.active {
+        border-bottom: none;
+        border-right: 3px solid #4e73df;
+    }
+    
+    .settings-section {
+        padding: 20px 15px;
+    }
+}
+
+/* تأثيرات بصرية إضافية */
+.input-group-text {
+    background: #f8f9fc;
+    border: 1px solid #e3e6f0;
+    border-radius: 8px 0 0 8px;
+}
+
+.form-control:focus + .input-group-text {
+    border-color: #4e73df;
+}
+
+/* تحسينات لـ toast */
+.toast-header {
+    border-radius: 8px 8px 0 0;
+}
+
+.toast-body {
+    border-radius: 0 0 8px 8px;
+}
+
+/* تأثيرات عند التمرير */
+.card {
+    scroll-margin-top: 100px;
+}
+
+/* تحسينات لـ form validation */
+.was-validated .form-control:invalid {
+    border-color: #e74a3b;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23e74a3b'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23e74a3b' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.was-validated .form-control:valid {
+    border-color: #1cc88a;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%231cc88a' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.7-3.7c.6-.6 1.6-.6 2.2 0s.6 1.5 0 2.1l-5.1 5.1c-.4.4-.9.7-1.4.7-.5 0-1.1-.3-1.5-.7z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
