@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons - Mazijna Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Sidebar & Header -->
+    <button class="toggle-btn" id="sidebarToggle">
+    <i class="bi bi-list" id="toggleIcon"></i>
+</button>
+
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="border-end" id="sidebar-wrapper">
+            <div class="sidebar-heading p-2">
+                <div class="d-flex align-items-center">
+                    <img src="assets/logo/logo.png" alt="" class="logo">
+                </div>
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="dashboard.html" class="list-group-item list-group-item-action bg-transparent active">
+                    <i class="bi bi-speedometer2"></i>Dashboard
+                </a>
+                <a href="products.html" class="list-group-item list-group-item-action bg-transparent">
+                    <i class="bi bi-music-note-list"></i>Products
+                </a>
+                <a href="users.html" class="list-group-item list-group-item-action bg-transparent">
+                    <i class="bi bi-people"></i>Users
+                </a>
+                <a href="orders.html" class="list-group-item list-group-item-action bg-transparent">
+                    <i class="bi bi-cart"></i>Orders
+                </a>
+                <a href="articles.html" class="list-group-item list-group-item-action bg-transparent">
+                    <i class="bi bi-file-earmark-text"></i>Articles
+                </a>
+                <a href="stock.html" class="list-group-item list-group-item-action bg-transparent">
+                    <i class="bi bi-box"></i>Stock
+                </a>
+                <a href="instructor.html" class="list-group-item list-group-item-action bg-transparent ">
+<i class="bi bi-music-note-beamed"></i>Instructor Dashboard
+</a>
+                <a href="lessons.html" class="list-group-item list-group-item-action bg-transparent">
+                    <i class="bi bi-music-note-beamed"></i>Lessons
+                </a>
+                <a href="settings.html" class="list-group-item list-group-item-action bg-transparent">
+                    <i class="bi bi-gear"></i>Settings
+                </a>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom p-3">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center" style="margin-left: auto;">
+                        <div class="dropdown">
+                            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown">
+                                <img src="https://ui-avatars.com/api/?name=Admin&background=0D6EFD&color=fff" class="rounded-circle me-2" width="36" height="36">
+                                <span>Admin</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="settings.html"><i class="bi bi-person me-2"></i>Profile</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid p-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1 class="h3 mb-0">Lessons Management</h1>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addLessonModal">
+                        <i class="bi bi-plus me-2"></i>Add New Lesson
+                    </button>
+                </div>
+                
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search lessons...">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-end">
+                                <select class="form-select w-auto d-inline-block">
+                                    <option>All Instruments</option>
+                                    <option>Guitars</option>
+                                    <option>Keyboards</option>
+                                    <option>Drums</option>
+                                    <option>Violin</option>
+                                    <option>Flute</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table mobile-table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Lesson ID</th>
+                                        <th>Title</th>
+                                        <th>Instrument</th>
+                                        <th>Level</th>
+                                        <th>Duration</th>
+                                        <th>Published</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Lesson ID">#L-1001</td>
+                                        <td data-label="Title">Basic Guitar Chords</td>
+                                        <td data-label="Instrument"><span class="badge bg-primary">Guitar</span></td>
+                                        <td data-label="Level"><span class="badge bg-info">Beginner</span></td>
+                                        <td data-label="Duration">15 min</td>
+                                        <td data-label="Published">2023-08-20</td>
+                                        <td data-label="Actions">
+                                            <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editLessonModal">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteLessonModal">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Lesson ID">#L-1002</td>
+                                        <td data-label="Title">Piano Scales Mastery</td>
+                                        <td data-label="Instrument"><span class="badge bg-primary">Piano</span></td>
+                                        <td data-label="Level"><span class="badge bg-info">Intermediate</span></td>
+                                        <td data-label="Duration">25 min</td>
+                                        <td data-label="Published">2023-08-22</td>
+                                        <td data-label="Actions">
+                                            <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editLessonModal">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteLessonModal">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Lesson ID">#L-1003</td>
+                                        <td data-label="Title">Drum Basics for Beginners</td>
+                                        <td data-label="Instrument"><span class="badge bg-primary">Drums</span></td>
+                                        <td data-label="Level"><span class="badge bg-info">Beginner</span></td>
+                                        <td data-label="Duration">20 min</td>
+                                        <td data-label="Published">2023-08-25</td>
+                                        <td data-label="Actions">
+                                            <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editLessonModal">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteLessonModal">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Lesson Modal -->
+    <div class="modal fade" id="addLessonModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New Lesson</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addLessonForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Lesson Title <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Instrument <span class="text-danger">*</span></label>
+                                <select class="form-select" required>
+                                    <option selected disabled>Select instrument</option>
+                                    <option>Guitar</option>
+                                    <option>Piano</option>
+                                    <option>Drums</option>
+                                    <option>Violin</option>
+                                    <option>Flute</option>
+                                    <option>Saxophone</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Lesson Level <span class="text-danger">*</span></label>
+                            <div class="d-flex">
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="level" id="beginner" value="beginner" checked>
+                                    <label class="form-check-label" for="beginner">Beginner</label>
+                                </div>
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="level" id="intermediate" value="intermediate">
+                                    <label class="form-check-label" for="intermediate">Intermediate</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="level" id="advanced" value="advanced">
+                                    <label class="form-check-label" for="advanced">Advanced</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Lesson Description <span class="text-danger">*</span></label>
+                            <textarea class="form-control" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Lesson Video <span class="text-danger">*</span></label>
+                            <input type="file" class="form-control" accept="video/*" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Announcement</label>
+                            <textarea class="form-control" rows="2" placeholder="Add a short announcement for your students..."></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Additional Resources</label>
+                            <input type="file" class="form-control" multiple>
+                            <small class="form-text text-muted">You can upload PDFs, images, or audio files</small>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="saveLessonBtn">Publish Lesson</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Lesson Modal -->
+    <div class="modal fade" id="editLessonModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Lesson</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editLessonForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Lesson Title <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" value="Basic Guitar Chords" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Instrument <span class="text-danger">*</span></label>
+                                <select class="form-select" required>
+                                    <option>Guitar</option>
+                                    <option selected>Piano</option>
+                                    <option>Drums</option>
+                                    <option>Violin</option>
+                                    <option>Flute</option>
+                                    <option>Saxophone</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Lesson Level <span class="text-danger">*</span></label>
+                            <div class="d-flex">
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="level" id="edit-beginner" value="beginner" checked>
+                                    <label class="form-check-label" for="edit-beginner">Beginner</label>
+                                </div>
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="level" id="edit-intermediate" value="intermediate">
+                                    <label class="form-check-label" for="edit-intermediate">Intermediate</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="level" id="edit-advanced" value="advanced">
+                                    <label class="form-check-label" for="edit-advanced">Advanced</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Lesson Description <span class="text-danger">*</span></label>
+                            <textarea class="form-control" rows="3" required>Learn the basic guitar chords that every beginner should know. This lesson covers open chords and simple transitions between them.</textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Current Video</label>
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="me-3">
+                                    <video width="120" height="80" controls>
+                                        <source src="https://example.com/lesson-video.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div>
+                                    <p class="mb-1">basic-guitar-chords.mp4</p>
+                                    <button type="button" class="btn btn-sm btn-outline-primary">Change Video</button>
+                                </div>
+                            </div>
+                            <input type="file" class="form-control" accept="video/*" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Announcement</label>
+                            <textarea class="form-control" rows="2">This lesson is now available for all beginner guitar students. Practice these chords daily for best results!</textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Additional Resources</label>
+                            <div class="mb-2">
+                                <div class="d-flex align-items-center mb-1">
+                                    <i class="bi bi-file-earmark-pdf me-2 text-danger"></i>
+                                    <span>guitar-chords-chart.pdf</span>
+                                    <button class="btn btn-sm btn-outline-danger ms-2">Remove</button>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-file-earmark-audio me-2 text-primary"></i>
+                                    <span>chord-transitions-audio.mp3</span>
+                                    <button class="btn btn-sm btn-outline-danger ms-2">Remove</button>
+                                </div>
+                            </div>
+                            <input type="file" class="form-control" multiple>
+                            <small class="form-text text-muted">You can upload PDFs, images, or audio files</small>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Update Lesson</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Lesson Modal -->
+    <div class="modal fade" id="deleteLessonModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirm Lesson Deletion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <div class="rounded-circle bg-danger d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px;">
+                            <i class="bi bi-music-note-x text-white fs-2"></i>
+                        </div>
+                        <h4 class="text-danger">Delete Lesson</h4>
+                        <p>Are you sure you want to delete this lesson?</p>
+                    </div>
+                    
+                    <div class="card bg-light mb-3">
+                        <div class="card-body text-center">
+                            <h5>Basic Guitar Chords</h5>
+                            <p class="text-muted">Published on August 20, 2023</p>
+                            <p class="badge bg-primary">Guitar</p>
+                            <p class="badge bg-info">Beginner</p>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-warning">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        This action is irreversible. The lesson will be permanently deleted from the system. All student progress related to this lesson will also be removed.
+                    </div>
+                    
+                    <div class="form-check mt-4">
+                        <input class="form-check-input" type="checkbox" value="" id="confirmDeleteCheck">
+                        <label class="form-check-label" for="confirmDeleteCheck">
+                            I understand that deleting this lesson cannot be undone
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn" disabled>Delete Lesson</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="js/lesson.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
